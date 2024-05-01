@@ -1,0 +1,89 @@
+.page-enquire {
+    padding: 4.6rem 0rem 8rem;
+
+    @media only screen and (min-width: 1200px) {
+        padding: 7.6rem 0rem 11.7rem;
+    }
+}
+
+.enquiry-block {
+    .enquiry-block__content {
+        margin-bottom: 3.6rem;
+    }
+
+    .enquiry-block__title {
+        font-size: 2.4rem;
+        font-family: $font-glorify-bold;
+        color: #000;
+        margin-bottom: 2.6rem;
+    }
+
+    .enquiry-block__text {
+        font-size: 1.6rem;
+        font-family: $font-cera-regular;
+        line-height: 2.6rem;
+    }
+
+    .submit-enquiry-form {
+        padding: 5rem 0rem;
+    }
+
+    @media only screen and (min-width: 992px) {
+        .enquiry-block__title {
+            font-size: 3.6rem;
+        }
+    }
+
+    @media only screen and (min-width: 1200px) {
+        .enquiry-block__text {
+            font-size: 2.4rem;
+            line-height: 3.2rem;
+        }
+
+        .submit-enquiry-form {
+            padding: 8rem 0rem 6.2rem;
+        }
+
+        .enquiry-block__content {
+            margin-bottom: 7rem;
+        }
+    }
+
+    @media only screen and (min-width: 1400px) {
+        .enquiry-block__title {
+            font-size: 4.8rem;
+        }
+    }
+}
+
+
+.enq-gap {
+
+    .enq-gap--right,
+    .enq-gap--left {
+        width: 100%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        .enq-gap--right {
+            padding-right: 1.5rem;
+        }
+
+        .enq-gap--leftt {
+            padding-left: 1.5rem;
+        }
+    }
+}
+
+.enq-hidden-field {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    transition: all 0.3s ease-out;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        display: block;
+    }
+}

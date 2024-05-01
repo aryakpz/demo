@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+<style media="screen">
+body {
+  margin: 0;
+  padding: 0;
+  background: white;
+}
+
+.box {
+  width: 500px;
+  padding: 40px;
+  position: absolute;
+  background: #191919;
+  text-align: center;
+  margin-top: 100px;
+  box-shadow: 4%;
+  border-radius: 2%;
+  margin-left: 100px;
+}
+
+.box input[type="text"],
+.box input[type="password"] {
+ 
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 10px 10px;
+  width: 250px;
+  outline: none;
+  color: white;
+
+border-radius: 24px;
+transition: 0.25s
+}
+
+.box h1 {
+color: white;
+font-weight: 300;
+}
+
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
+width: 300px;
+border-color: #0a3f20
+}
+
+.box input[type="submit"] {
+border: 0;
+background: none;
+display: block;
+margin: 20px auto;
+text-align: center;
+border: 2px solid #0a301a;
+padding: 14px 40px;
+outline: none;
+color: white;
+border-radius: 24px;
+transition: 0.25s;
+cursor: pointer
+}
+
+.box input[type="submit"]:hover {
+background: #053017
+}
+
+</style>
+
+  </head>
+  <body>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card"><form class="box" method="post" enctype="multipart/form-data">
+                        <u style="color: white;"><h1>ADMIN REGISTRATION</h1></u>
+                        <p class="text-muted" style="color: rgb(221, 201, 201); "> Please enter your email and password to create your account !</p>
+                        {% render_field      .email class="form-control" placeholder="email" %}
+                        {% render_field      .password class="form-control" placeholder="Password" %}
+                        <input type="submit" name="" value="Create">
+                    </form>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

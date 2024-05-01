@@ -1,0 +1,31 @@
+body {
+    font-size: 1.4rem;
+    font-family: "CeraProRegular";
+}
+
+#toast-container {
+    font-size: 1.4rem;
+}
+
+#toast-container>div:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+}
+
+.ph-number-verify {
+    position: absolute;
+    right: 0;
+    bottom: 0.4rem;
+}
+
+.ph-number-verify .verify-number {
+    border: none;
+    font-size: 1.4rem;
+    color: #497a6e;
+    font-family: 'CeraProMedium';
+    text-decoration: underline;
+    transition: all 0.3s ease-out;
+}
+
+.ph-number-verify .verify-number:hover {
+    text-decoration: none;
+}

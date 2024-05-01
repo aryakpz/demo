@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="main-content">
+    <div class="breadcrumb">
+        <h1>Add medicine</h1>&emsp;
+        <ul>
+            <li><a  href="/admin/home"><i class="fa fa-home"></i></a></li>
+            <li><a  href="/admin/manage/medicines">Medicines</a></li>
+        </ul>
+    </div>
+    <div class="separator-breadcrumb">
+
+        <div class="col-md-12">
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-success" role="alert"><strong class="text-capitalize">{{ message }}</strong>{% endfor %}
+                <button class="close" type="button" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            {% endif %}
+        </div>
+        
+        <form method="post" class="form-container" id="form_data"  enctype="multipart/form-data"autocomplete="off">
+            {% csrf_token %}
+            <div class="main-content">
+                <div class="breadcrumb">
+                </div>
+                <div class="separator-breadcrumb border-top"></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="card-title mb-3"></div>
+                                    <div class="row">
+                                        <div class="col-md-6 form-group mb-3">
+                                            <label for="firstName1">Medicine Name</label>
+                                            <input class="form-control" id="name" pattern=".{3,30}" required title="3 to 30 characters" type="text" placeholder="Enter medicine name" name="name" value="" />
+                                        </div>
+
+                                        <div class="col-md-6 form-group mb-3">
+                                            <label for="firstName1">Medicine Code</label>
+                                            <input class="form-control" id="code" pattern=".{3,30}" required title="3 to 30 characters" type="text" placeholder="Enter medicine name" name="code" value="" />
+                                        </div>
+
+                                        <div class="col-md-6 form-group mb-3">
+                                            <label for="firstName1">Description</label>
+                                            <textarea class="form-control"  pattern=".{3,300}" required title="3 to 300 characters" type="text" placeholder="Enter your medicine name" name="description" value="">
+
+                                            </textarea>
+                                        </div>
+
+                                        <div class="col-md-6 form-group mb-3">
+                                            <label for="firstName1">Price</label>
+                                            <input class="form-control" id="price" pattern=".{3,30}" required title="3 to 30 characters" type="text" placeholder="Enter your department name" name="price" value="" />
+                                        </div>
+
+                                        
+
+                                        <div class="col-md-6 form-group mb-3">
+                                            <label for="firstName1">Quantity</label>
+                                            <input class="form-control" id="quantity" pattern=".{1,30}" required title="3 to 30 characters" type="text" placeholder="Enter your department name" name="quantity" value="" />
+                                        </div>
+
+                                        <div class="col-md-6 form-group mb-3">
+                                            <label for="firstName1">Image</label>
+                                            <input class="form-control" id="image" pattern=".{3,30}" required title="3 to 30 characters" type="file" placeholder="Enter your department name" name="image" value="" />
+                                        </div>
+
+                                        <div class="col-md-6 form-group mb-3">
+                                            <label for="firstName1">Exp Date</label>
+                                            <input class="form-control" id="date"  type="date" placeholder="select date" name="date" />
+                                        </div>
+                                      
+                                            <div class="col-md-12">
+                                                <button class="btn btn-info" type="submit">Save </button>&emsp;
+                                                <a class="btn btn-light" href="/admin/manage/medicines">Back</a>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+{% block js %}
+<script>
+
+
+</script>
+<script src="/static/dist-assets/js/scripts/admin/bootstrap-tagsinput.js"></script>
+<script src="/static/dist-assets/js/scripts/admin/jquery-ui.js"></script>
+<script src="/static/dist-assets/js/scripts/admin/group.js"></script>
+<script src="/static/dist-assets/js/scripts/sidebar.compact.script.min.js"></script>
+<script src="/static/dist-assets/js/plugins/tagging.min.js"></script>
+<script src="/static/dist-assets/js/scripts/tagging.script.min.js"></script>
+{% endblock %}

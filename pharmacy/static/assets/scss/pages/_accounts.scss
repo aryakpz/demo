@@ -1,0 +1,429 @@
+.page-account {
+    width: 100%;
+    position: relative;
+    padding: 4rem 0rem 8rem;
+
+    .page-account__header {
+        font-size: 2.4rem;
+        font-family: $font-glorify-bold;
+        color: #000;
+        margin-bottom: 1.5rem;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        padding: 1.4rem 0rem 13.5rem;
+
+        .page-account__header {
+            font-size: 3.6rem;
+            margin-bottom: 2.4rem;
+        }
+    }
+
+    @media only screen and (min-width: 1400px) {
+        padding: 1.4rem 0rem 13.5rem;
+
+        .page-account__header {
+            font-size: 4.8rem;
+            margin-bottom: 4.4rem;
+        }
+    }
+}
+
+.page-enq-list {
+    padding: 4rem 0rem 6.2rem;
+
+    @media only screen and (min-width: 1200px) {
+        padding: 12rem 0rem 10.2rem;
+    }
+}
+
+
+.account-panel {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .account-panel__left {
+        width: 100%;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: '';
+            right: 0;
+            width: 1px;
+            background-color: #b2b2b2;
+            top: 0;
+            height: 100%;
+            max-height: 22.6rem;
+            opacity: 0;
+        }
+    }
+
+    .account-panel__main {
+        width: 100%;
+
+        .floating-form {
+            .form-group {
+                margin-bottom: 3rem;
+
+                .input-wrap {
+
+                    &.active {
+                        label {
+                            bottom: auto;
+                            top: -2.5rem;
+                            font-size: 1.6rem;
+                            color: #929292;
+                        }
+                    }
+                }
+            }
+        }
+
+        .submit-profile-data {
+            padding: 1rem 0rem 5.5rem;
+
+        }
+    }
+
+    @media only screen and (min-width: 992px) {
+        .account-panel__left {
+            width: 30.0rem;
+
+            &::after {
+                opacity: 1;
+            }
+        }
+
+        .account-panel__main {
+            width: calc(100% - 30.0rem);
+            padding-left: 4rem;
+
+            .floating-form {
+                .form-group {
+                    margin-bottom: 3rem;
+                }
+            }
+
+            .submit-profile-data {
+                padding: 5.5rem 0rem;
+            }
+        }
+    }
+
+    @media only screen and (min-width:1200px) {
+        .account-panel__left {
+            width: 34.0rem;
+        }
+
+        .account-panel__main {
+            width: calc(100% - 34.0rem);
+
+            .floating-form {
+                .form-group {
+                    margin-bottom: 3.8rem;
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width:1400px) {
+        .account-panel__left {
+            width: 44.9rem;
+        }
+
+        .account-panel__main {
+            width: calc(100% - 44.9rem);
+            padding-left: 7.4rem;
+
+            .floating-form {
+                .form-group {
+                    margin-bottom: 3.8rem;
+                }
+            }
+        }
+    }
+}
+
+.account-menu {
+    padding: 0.5rem 0rem;
+    margin: 0rem 0rem;
+    list-style: none;
+
+    .account-menu__item {
+        font-family: $font-cera-regular;
+        font-size: 1.6rem;
+        position: relative;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.4rem;
+        transition: all 0.3s ease-out;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            -webkit-transform: scaleX(0);
+            -ms-transform: scaleX(0);
+            transform: scaleX(0);
+            -webkit-transform-origin: bottom right;
+            -ms-transform-origin: bottom right;
+            transform-origin: bottom right;
+            -webkit-transition: -webkit-transform 0.3s;
+            transition: -webkit-transform 0.3s;
+            -o-transition: transform 0.3s;
+            transition: transform 0.3s;
+            transition: transform 0.3s, -webkit-transform 0.3s;
+            background-color: #000000;
+        }
+
+        .account-menu__links {
+            color: #000;
+        }
+
+        &.active,
+        &:hover {
+            font-family: $font-cera-bold;
+
+            &::after {
+                -webkit-transform-origin: bottom left;
+                -ms-transform-origin: bottom left;
+                transform-origin: bottom left;
+                -webkit-transform: scaleX(1);
+                -ms-transform: scaleX(1);
+                transform: scaleX(1);
+            }
+        }
+    }
+
+    @media only screen and (min-width:992px) {
+        width: 100%;
+        max-width: 22.2rem;
+    }
+
+    @media only screen and (min-width:1200px) {
+        .account-menu__item {
+            font-size: 2.0rem;
+        }
+    }
+
+    @media only screen and (min-width:1400px) {
+        .account-menu__item {
+            font-size: 2.4rem;
+        }
+    }
+}
+
+.enquiry-list-block {
+    width: 100%;
+
+    .accordion {
+        .accordion-item {
+            background-color: #fff;
+            border: none;
+        }
+
+        .accordion-button {
+            border-radius: 0.6rem;
+            background: #F6F6F6;
+            margin-bottom: 1rem;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            font-size: 1.6rem;
+            font-family: $font-cera-regular;
+            color: #000;
+            padding: 1.5rem 1.5rem 1.5rem 5.5rem;
+
+            &::after {
+                background-image: url('../images/account/plus.svg');
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                content: "";
+                position: absolute;
+                left: 2.5rem;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                background-size: inherit;
+                padding: 0rem 0rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 3rem;
+                width: 2rem;
+                height: 2rem;
+                line-height: 3.0rem;
+                // transition: all 0.3s ease-out;
+            }
+        }
+
+        .accordion-button:not(.collapsed):after {
+            background-image: url('../images/account/minus.svg');
+        }
+
+        .accordion-body {
+            padding: 0rem 0rem;
+
+        }
+    }
+
+    @media only screen and (min-width:1200px) {
+        .accordion {
+            .accordion-button {
+                font-size: 2.0rem;
+            }
+        }
+    }
+}
+
+.enq-prodcuct {
+    border: 1px solid #C8C8C8;
+    border-radius: 1rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: $font-cera-regular;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+
+    .enq-prodcuct__image {
+        width: 8rem;
+        flex: none;
+    }
+
+    .enq-product__body {
+        width: calc(100% - 8rem);
+        padding-left: 2rem;
+    }
+
+    .enq-prodcuct__name {
+        font-size: 1.6rem;
+        color: #000;
+        margin-bottom: 1rem;
+        display: inline-block;
+        transition: all 0.3s ease-out;
+
+        // &:hover {
+        //     color: $color-hover;
+        // }
+    }
+
+    .enq-prodcuct__code {
+        font-size: 1.6rem;
+        color: #000;
+        margin-bottom: 0.5rem;
+    }
+
+    .enq-prodcuct__quantity {
+        font-size: 1.6rem;
+    }
+
+
+
+    @media only screen and (min-width: 992px) {
+        border: none;
+        border-radius: 0rem 0rem;
+        padding: 1rem 0rem 2rem;
+        border-bottom: 1px solid #929292;
+
+        &:last-of-type {
+            border-bottom: none;
+        }
+
+        .enq-prodcuct__image {
+            width: 9.6rem;
+            height: 10.1rem;
+            border: 1px solid;
+            border-radius: 1rem;
+            border-color: #C8C8C8;
+        }
+
+        .enq-product__body {
+            width: calc(100% - 9.6rem);
+            display: flex;
+            justify-content: space-between;
+            // flex-wrap: wrap;
+        }
+
+        .enq-prodcuct__name,
+        .enq-prodcuct__code,
+        .enq-prodcuct__quantity {
+            // flex: 1;
+            margin-bottom: 0rem;
+        }
+
+        .enq-prodcuct__name {
+            width: 100%;
+            max-width: 29.1rem;
+        }
+
+        .enq-prodcuct__code {
+            text-align: center;
+            width: 100%;
+            max-width: 15.0rem;
+        }
+
+        .enq-prodcuct__quantity {
+            text-align: right;
+        }
+    }
+
+    @media only screen and (min-width: 1400px) {
+        .enq-product__body {
+            padding-left: 5.6rem;
+        }
+    }
+}
+
+.enq-prodcuct-footer {
+    padding: 0.4rem 0rem 5.8rem;
+    display: block;
+
+}
+
+.btn-download-list {
+    border: 1px solid #929292;
+    font-size: 1.6rem;
+    font-family: $font-cera-regular;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem 1.8rem;
+    border-radius: 0.6rem;
+    transition: all 0.3s ease-out;
+
+    .btn-download-list__icon {
+        width: 2rem;
+        height: 2rem;
+        display: inline-flex;
+        margin-right: 1rem;
+    }
+
+    svg {
+        width: 100%;
+        height: 100%;
+
+        path {
+            transition: all 0.3s ease-out;
+        }
+    }
+
+    &:hover {
+        background-color: $color-hover;
+        color: #fff;
+        border-color: $color-hover;
+        border-radius: 0rem;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+
+        svg {
+            path {
+                fill: #fff;
+            }
+        }
+    }
+}

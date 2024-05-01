@@ -1,0 +1,189 @@
+.page-brands {
+    padding: 4rem 0rem;
+
+    .page-brands__title {
+        font-size: 2.4rem;
+        font-family: $font-glorify-bold;
+        color: #000;
+        margin-bottom: 2.6rem;
+    }
+
+    @media only screen and (min-width: 992px) {
+        .page-brands__title {
+            font-size: 3.6rem;
+        }
+    }
+
+    @media only screen and (min-width:1200px) {
+        padding: 2.5rem 0rem 0;
+    }
+
+    @media only screen and (min-width: 1400px) {
+        .page-brands__title {
+            font-size: 4.8rem;
+        }
+    }
+
+}
+
+
+.brands-list__grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0rem 0rem;
+    padding: 0rem 0rem;
+    list-style: none;
+
+    .brands-list__grid-col {
+        width: 50%;
+        padding: 1rem 1.5rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 11.1rem;
+        background-color: rgb(255, 255, 255);
+        position: relative;
+
+        //   overflow: hidden;
+        img {
+            filter: grayscale(1);
+            transform: translateY(0rem);
+            transition: all 0.5s ease-out;
+        }
+
+        &:hover {
+            img {
+                filter: grayscale(0);
+                transform: translateY(-1rem)
+            }
+        }
+
+        &::after,
+        &::before {
+            position: absolute;
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 0%;
+            background: rgb(255, 255, 255);
+        }
+
+        &::after {
+            position: absolute;
+            right: -1px;
+            bottom: -1px;
+        }
+
+        &::before {
+            left: -1px;
+            bottom: -1px;
+        }
+    }
+
+
+    @media (max-width: 767px) {
+        .brands-list__grid-col {
+            width: calc(100% / 2);
+            border-width: thin;
+            border-bottom: 1px solid #b2b2b2;
+            border-right: 1px solid #b2b2b2;
+            margin-top: 1rem;
+
+            img {
+                max-width: 10rem;
+            }
+
+            &:nth-child(n + 2):nth-last-child(-n + 2) {
+                // background-color: #497a6e;
+                border-bottom: none;
+
+                &::after {
+                    right: -1px;
+                    top: -1px;
+                    bottom: auto;
+                    opacity: 0;
+                }
+
+                &::before {
+                    left: -1px;
+                    top: -1px;
+                    bottom: auto;
+                    opacity: 0;
+                }
+            }
+
+            &:nth-child(2n + 2) {
+                border-right: 0rem;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        .brands-list__grid-col {
+            width: calc(100% / 4) !important;
+            border-width: thin;
+            border-bottom: 1px solid #b2b2b2;
+            border-right: 1px solid #b2b2b2;
+            margin-top: 1rem;
+
+            img {
+                max-width: 10.5rem;
+            }
+
+            &:nth-child(n + 2):nth-last-child(-n + 4) {
+                border-bottom: none;
+
+                &::after {
+                    right: -1px;
+                    top: -1px;
+                    bottom: auto;
+                    opacity: 0;
+                }
+
+                &::before {
+                    left: -1px;
+                    top: -1px;
+                    bottom: auto;
+                    opacity: 0;
+                }
+            }
+
+            &:nth-child(4n + 4) {
+                border-right: 0rem;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 992px) {
+        .brands-list__grid {
+            .brands-list__grid-col {
+                width: calc(100% / 4);
+                border-width: thin;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 1200px) {
+        padding: 0.7rem 0rem 11.6rem;
+
+
+        .brands-list__grid-col {
+            img {
+                max-width: 25.6rem;
+            }
+        }
+
+        .brands-list__title {
+            font-size: 3.6rem;
+            margin-bottom: 4rem;
+        }
+    }
+
+    @media only screen and (min-width: 1400px) {
+        .brands-list__title {
+            font-size: 4.8rem;
+        }
+    }
+}

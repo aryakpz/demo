@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'glorifydemo';
+    src: url('GlorifyDEMO.eot');
+    src: url('GlorifyDEMO.eot?#iefix') format('embedded-opentype'),
+        url('GlorifyDEMO.woff2') format('woff2'),
+        url('GlorifyDEMO.woff') format('woff'),
+        url('GlorifyDEMO.ttf') format('truetype'),
+        url('GlorifyDEMO.svg#GlorifyDEMO') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

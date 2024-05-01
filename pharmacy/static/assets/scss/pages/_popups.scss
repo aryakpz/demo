@@ -1,0 +1,209 @@
+.popup-small {
+    max-width: 52.9rem;
+}
+
+.popup-content {
+    border-radius: 1.7rem;
+    border: none;
+    padding: 2.5rem 2.5rem;
+}
+
+.popup-title {
+    font-size: 2.4rem;
+    font-family: $font-glorify-bold;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.popup-text {
+    font-size: 1.6rem;
+    font-family: $font-cera-regular;
+    color: #000;
+    margin-bottom: 3.2rem;
+}
+
+.popup-text--fade {
+    color: #6B6B6B;
+}
+
+.popup-form {
+    width: 100%;
+    padding: 0.5rem 0rem 1rem;
+    font-family: $font-cera-regular;
+    border-bottom: 1px solid #707070;
+    margin-bottom: 3.8rem;
+
+    .country-code {
+        border-right: 1px solid #707070;
+        padding: 0.5rem 1.5rem 0.5rem 0rem;
+        margin-right: 0.5rem;
+        flex: none;
+        font-size: 1.6rem;
+
+        select {
+            min-height: 3rem;
+            border: none;
+            outline: 0;
+            font-size: 1.6rem;
+        }
+    }
+
+    .form-group {
+        width: 100%;
+
+        .form-control {
+            width: 100%;
+            font-size: 1.6rem;
+            border: none;
+            border-radius: 0rem;
+            height: 100%;
+            padding: 0rem 1rem;
+
+            &:focus {
+                outline: 0;
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+.popup-btn-group {
+    width: 100%;
+    max-width: 16.4rem;
+    margin: 0px auto;
+    justify-content: space-between;
+
+    .btn-popup-cancel,
+    .btn-popup-success {
+        width: calc(50% - 1rem);
+        font-size: 1.6rem;
+        border-radius: 0.6rem;
+        padding: 0.8rem 1rem;
+        font-family: $font-cera-regular;
+
+    }
+
+    .btn-popup-cancel {
+        color: #000;
+        transition: all 0.3s ease-out;
+
+        &:hover {
+            background-color: $color-hover;
+            color: #fff;
+            border-radius: 0rem;
+            box-shadow: 0px 0px 20px 0px rgba(76, 87, 125, 0.2);
+        }
+    }
+
+    .btn-popup-success {
+        color: #fff;
+        background-color: $color-hover;
+        transition: all 0.3s ease-out;
+
+        &:hover {
+            background-color: #355f55;
+            border-radius: 0rem;
+            box-shadow: 0px 0px 20px 0px rgba(76, 87, 125, 0.2);
+        }
+    }
+}
+
+.create-an-account {
+    font-family: $font-cera-regular;
+    font-size: 1.6rem;
+    margin-top: 2.6rem;
+    color: #000;
+
+    a {
+        color: $color-hover;
+        font-family: $font-cera-bold;
+        transition: all 0.3s ease-out;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.btn-get-otp {
+    width: 100%;
+    background-color: #497a6e;
+    border-radius: 0.6rem;
+    font-family: "CeraProRegular";
+    color: #fff;
+    font-size: 1.8rem;
+    padding: 1.3rem 1rem;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+        background-color: #355f55;
+        border-radius: 0rem;
+        color: #fff;
+        box-shadow: 0px 0px 20px 0px rgba(76, 87, 125, 0.2);
+    }
+}
+
+.btn-popup-close {
+    width: 2rem;
+    height: 2rem;
+    padding: 0rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.otp-validate {
+    width: 100%;
+    margin-bottom: 3.8rem;
+
+    .otp-field {
+        width: calc(25% - 3rem);
+        height: 40px;
+        text-align: center;
+        border: none;
+        border-bottom: 1px solid #707070;
+        font-size: 2.0rem;
+        color: #000;
+        font-family: $font-cera-bold;
+
+        &:focus {
+            order-bottom: 1px solid $color-hover;
+        }
+    }
+}
+
+.gap-top-50 {
+    margin-top: 3rem;
+}
+
+@media only screen and (min-width: 1200px) {
+    .popup-title {
+        font-size: 3.8rem;
+    }
+
+    .popup-content {
+        padding: 5.0rem 5.0rem;
+    }
+
+    .popup-form {
+        margin-bottom: 2.4rem;
+
+        .country-code {
+            font-size: 1.9rem;
+        }
+
+        .form-group {
+            .form-control {
+                font-size: 1.9rem;
+            }
+        }
+    }
+}

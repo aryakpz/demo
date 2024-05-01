@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" dir="">
+{% load static %}
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Social network</title>
+    <link rel="icon"  type="image/png" sizes="32x32" href="/static/backend/images/png/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="icon"  type="image/png" sizes="32x32" href="/static/backend/images/png/favicon.png">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/dist-assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/dist-assets/css/bootstrap.css.map.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700,800,900" rel="stylesheet" />
+    <link href="/static/dist-assets/css/themes/lite-purple.min.css" rel="stylesheet" />
+    <link href="/static/dist-assets/css/plugins/perfect-scrollbar.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/dist-assets/css/plugins/cropper.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700,800,900" rel="stylesheet" />
+    <link href="/static/dist-assets/css/themes/lite-purple.min.css" rel="stylesheet" />
+    <link href="/static/dist-assets/css/plugins/perfect-scrollbar.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/dist-assets/css/plugins/datatables.min.css" />
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="/static/dist-assets/css/select2.min.css" rel="stylesheet" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700,800,900" rel="stylesheet" />
+    <link href="/static/dist-assets/css/themes/lite-purple.min.css" rel="stylesheet" />
+    <link href="/static/dist-assets/css/plugins/perfect-scrollbar.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/dist-assets/css/plugins/sweetalert2.min.css" />
+    <link rel="stylesheet" href="/static/assets/css/intlTelInput.css">
+    <link rel="stylesheet" href="/static/dist-assets/css/plugins/toastr.css" />
+    <!-- <link rel="stylesheet" href="/static/dist-assets/css/plugins/cropper.min.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.7/cropper.css"></link>
+</head>
+
+<body class="text-left">
+    <div class="app-admin-wrap layout-sidebar-large">
+        <div class="main-header">
+            <div class="logo">
+                <h2>Pharmacy</h2>
+            </div>
+            <div class="menu-toggle">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            
+            <div style="margin: auto"></div>
+            <div class="header-part-right">
+                <!-- Full screen toggle -->
+                
+                <!-- Grid menu Dropdown -->
+                                
+                <!-- User avatar dropdown -->
+                <div class="dropdown">
+                    <div class="user col align-self-end">
+                        <img src="/static/assets/images/home/profileimage.png" id="userDropdown" alt="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                            <div class="dropdown-header">
+                            </div>
+                            <a href="/admin/logout" class="dropdown-item">Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="side-content-wrap">
+            <div class="sidebar-left open rtl-ps-none" data-perfect-scrollbar="" data-suppress-scroll-x="true">
+                <ul class="navigation-left">
+                    <li class="nav-item"><a class="nav-item-hold" href="/admin/home"><i class="nav-icon i-Bar-Chart"></i><span class="nav-text">Dashboard</span></a>
+                        <div class="triangle"></div>
+                    
+
+                    <li class="nav-item" data-item="dashboard"><a class="nav-item-hold" href="#"><i class="nav-icon i-Library"></i><span class="nav-text">Medicines</span></a>
+                        <div class="triangle"></div>
+                    </li>
+
+                    <li class="nav-item" data-item="form"><a class="nav-item-hold" href="#"><i class="nav-icon i-Computer-Secure"></i><span class="nav-text">Enquires</span></a>
+                        <div class="triangle"></div>
+                    </li>
+
+                 
+
+                    <li class="nav-item" data-item="users"><a class="nav-item-hold" href="#"><i class="nav-icon i-Computer-Secure"></i><span class="nav-text">Users</span></a>
+                        <div class="triangle"></div>
+                    </li>
+
+                    <li class="nav-item" data-item="userslast"><a class="nav-item-hold" href="#"><i class="nav-icon i-Computer-Secure"></i><span class="nav-text">Purchase History</span></a>
+                        <div class="triangle"></div>
+                    </li>
+
+                    <li class="nav-item" data-item="architect"><a class="nav-item-hold" href="#"><i class="nav-icon i-Library"></i><span class="nav-text">About</span></a>
+                        <div class="triangle"></div>
+                    </li>
+
+                    <li class="nav-item" data-item="contact"><a class="nav-item-hold" href="#"><i class="nav-icon i-Library"></i><span class="nav-text">Contact</span></a>
+                        <div class="triangle"></div>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="sidebar-left-secondary rtl-ps-none" data-perfect-scrollbar="" data-suppress-scroll-x="true">
+                <!-- Submenu Dashboards-->
+
+                <ul class="childNav" data-parent="dashboard">
+                    <li class="nav-item"><a href="/admin/manage/medicines"><i class="nav-icon i-Male"></i><span class="item-name">View Medicines</span></a></li> 
+                    <li class="nav-item"><a href="/admin/manage/add/medicine"><i class="nav-icon i-Male"></i><span class="item-name">Add Medicines</span></a></li> 
+                </ul>
+                
+
+                <ul class="childNav" data-parent="userslast">
+                    <li class="nav-item"><a href="/admin/manage/purchase"><i class="nav-icon i-Male"></i><span class="item-name">View purchased products</span></a></li>
+                </ul>
+
+                <ul class="childNav" data-parent="users">
+                    <li class="nav-item"><a href="/admin/manage/user"><i class="nav-icon i-Male"></i><span class="item-name">View Users</span></a></li>
+                </ul>
+
+                <ul class="childNav" data-parent="form">
+                    <li class="nav-item"><a href="/admin/manage/enquiry"><i class="nav-icon i-Male"></i><span class="item-name">View Enquiry</span></a></li>
+                    
+                </ul>
+                <ul class="childNav" data-parent="architect">
+                    <li class="nav-item"><a href="/admin/manage/privacy"><i class="nav-icon i-Male"></i><span class="item-name">View Privacy Policy</span></a></li>
+                </ul>
+
+                <ul class="childNav" data-parent="contact">
+                    <li class="nav-item"><a href="/admin/manage/contact"><i class="nav-icon i-Male"></i><span class="item-name">View contactus</span></a></li>
+                </ul>
+                
+                
+            </div>
+            <div class="sidebar-overlay"></div>
+        </div>
+        <!-- =============== Left side End ================-->
+        <div class="main-content-wrap sidenav-open d-flex flex-column">
+           {% block content %}
+           {% endblock %}
+        </div>
+    </div>
+    
+    <script src="/static/dist-assets/js/plugins/jquery-3.3.1.min.js"></script>
+    <script src="/static/dist-assets/js/plugins/bootstrap.bundle.min.js"></script>
+    <script src="/static/dist-assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="/static/dist-assets/js/scripts/script.min.js"></script>
+    <script src="/static/dist-assets/js/scripts/sidebar.large.script.min.js"></script>
+    <script src="/static/dist-assets/js/plugins/sweetalert2.min.js"></script>
+    <script src="/static/dist-assets/js/scripts/sweetalert.script.min.js"></script>
+    <script src="/static/dist-assets/js/plugins/datatables.min.js"></script>
+    <script src="/static/dist-assets/js/scripts/datatables.script.min.js"></script>
+
+    <script>
+$(window).on('load refresh', function () {
+    usericon();
+})
+function usericon() {
+    $.ajax({
+        url: '/admin/ajax_user',
+        type: "GET",
+        data: {
+            csrfmiddlewaretoken: "{{ csrf_token }}",
+            dataType: "json",
+        },
+        success: function (data) {
+           $("#name_change").text(''+data.first_name+' '+data.last_name+'')
+        }
+    });
+}
+
+    </script>
+    {% block js %}
+    {% endblock %}
+</body>
+
+</html>
+
+
